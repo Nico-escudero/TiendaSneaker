@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* un roor para los colores de la página */
+:root {
+    --color-primario: #f8f9fa;
+    --color-secundario: #e2e8f0;
+    --color-terciario: #0f172a;
+    --color-acento: #f5a42b;
+}
+
+/* Estilos de la página */
+body {
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilos para el header y el footer */
+.header,
+.footer {
+    background-color: var(--color-primario);
+}
+
+/* unimos header, main y footer para darles a todos el mismo estilo, para no repetir codigo */
+.header,
+.footer,
+.main {
+    padding: 1rem;
+}
+
+.header {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.footer {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+
+/* Centrando los elementos del footer */
+.footer {
+    text-align: center;
+    color: var(--color-acento);
+}
+
+
+/* sacamos el estilo de la lista */
+ul li {
+    list-style: none;
+}
+
+/* le damos un fondo al logo del nav para distinguirlo*/
+.logo {
+    width: 100px;
+    height: 100px;
+    padding: 0.5rem;
+    background-color: var(--color-terciario);
+    border-radius: 1rem 0 1rem 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* le damos un tamaño a la imagen del logo */
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+/* sacamos el estilo de los enlaces */
+a {
+    text-decoration: none;
+    color: var(--color-acento);
+}
+
+/* Estilo especial para el H1 */
+h1 {
+    color: var(--color-secundario);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Estilo especial para el P */
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Clase hechada para destacar con el color acento */
+.importante {
+    font-weight: bold;
+    color: var(--color-acento);
+}
+
+/* Clase para darle un fondo al formulario */
+.formulario {
+    background-color: var(--color-primario);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* Estilo especial para los labels */
+form .label {
+    color: var(--color-acento);
+}
+
+/* Estilo especial para los inputs redondeandolos y darle un fondo */
+form .input {
+    border-radius: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--color-secundario);
+    background-color: var(--color-primario);
+    color: var(--color-terciario);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dejamos la apariencia default de los botones y le damos estilo */
+.boton {
+    background-color: var(--color-acento);
+    border: none;
+    color: var(--color-primario);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cree un fondo para los productos que esten separados */
+.card {
+    width: 20rem;
+    height: 30rem;
+    margin: 1rem;
+    background-color: var(--color-primario);
+    padding: 1rem;
+    border-radius: 0 1rem 1rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--color-terciario);
+    text-align: center;
+}
+
+
+/* Le damos un tamaño a la imagen del producto */
+.card img {
+    width: 100%;
+    height: 50%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
