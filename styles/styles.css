@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
-/* un roor para los colores de la página */
+/* un roor para los colores de la página en formato hexadecimal */
 :root {
-    --color-primario: #f8f9fa;
-    --color-secundario: #e2e8f0;
-    --color-terciario: #0f172a;
-    --color-acento: #f5a42b;
+    --color-primario: #141414;
+    --color-secundario: #0f0f0f;
+    --color-terciario: #fafafa;
+    --color-acento: #ff2d26;
 }
 
 /* Estilos de la página */
@@ -14,18 +14,38 @@ body {
     font-family: "Abel", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: var(--color-terciario);
-    color: var(--color-primario);
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
     margin: 0;
     padding: 0;
 }
 
-
-/* Estilos para el header y el footer */
-.header,
-.footer {
-    background-color: var(--color-primario);
+/* Estilo para el H1 */
+h1 {
+    color: var(--color-terciario);
+    font-size: 2.5rem;
+    font-weight: 700;
 }
+
+/* Estilo para el P */
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* sacamos el estilo de la lista */
+ul li {
+    list-style: none;
+}
+
+
+/* sacamos el estilo de los enlaces */
+a {
+    text-decoration: none;
+    color: var(--color-terciario);
+}
+
 
 /* unimos header, main y footer para darles a todos el mismo estilo, para no repetir codigo */
 .header,
@@ -34,62 +54,38 @@ body {
     padding: 1rem;
 }
 
-.header {
-    border-radius: 0 0 0.5rem 0.5rem;
-}
-
+/* Estilos para el header y el footer */
+.header,
 .footer {
-    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: var(--color-secundario);
+
 }
 
+.main {
+    background-color: var(--color-primario);
+}
 
 /* Centrando los elementos del footer */
 .footer {
     text-align: center;
-    color: var(--color-acento);
 }
 
-
-/* sacamos el estilo de la lista */
-ul li {
-    list-style: none;
-}
-
-/* le damos un fondo al logo del nav para distinguirlo*/
-.logo {
-    width: 100px;
-    height: 100px;
-    padding: 0.5rem;
-    background-color: var(--color-terciario);
-    border-radius: 1rem 0 1rem 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-/* le damos un tamaño a la imagen del logo */
+/* le damos un tamaño a la imagen del logo y a su fondo */
+.logo,
 .logo img {
     width: 100px;
     height: 100px;
 }
 
-/* sacamos el estilo de los enlaces */
-a {
-    text-decoration: none;
-    color: var(--color-acento);
+/* le damos un fondo al logo del nav para distinguirlo*/
+.logo {
+    padding: 0.5rem;
+    background-color: var(--color-terciario);
+    border-radius: 1rem 0 1rem 0;
+    /* Estilo para el logo del nav */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo especial para el H1 */
-h1 {
-    color: var(--color-secundario);
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-/* Estilo especial para el P */
-p {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-}
 
 /* Clase hechada para destacar con el color acento */
 .importante {
@@ -99,31 +95,25 @@ p {
 
 /* Clase para darle un fondo al formulario */
 .formulario {
-    background-color: var(--color-primario);
+    background-color: var(--color-terciario);
+    color: var(--color-secundario);
     padding: 2rem;
     border-radius: 1rem;
 }
 
-/* Estilo especial para los labels */
-form .label {
-    color: var(--color-acento);
-}
-
-/* Estilo especial para los inputs redondeandolos y darle un fondo */
-form .input {
+/* Estilo para los inputs redondeandolos y darle un fondo */
+.formulario .input {
     border-radius: 1.5rem;
     padding: 1rem;
     border: 1px solid var(--color-secundario);
-    background-color: var(--color-primario);
-    color: var(--color-terciario);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-terciario);
 }
 
 /* Dejamos la apariencia default de los botones y le damos estilo */
 .boton {
     background-color: var(--color-acento);
     border: none;
-    color: var(--color-primario);
+    color: var(--color-terciario);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -132,19 +122,17 @@ form .input {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Cree un fondo para los productos que esten separados */
 .card {
-    width: 20rem;
-    height: 30rem;
+    width: 15rem;
+    height: 20rem;
     margin: 1rem;
-    background-color: var(--color-primario);
+    background-color: var(--color-terciario);
     padding: 1rem;
     border-radius: 0 1rem 1rem 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: var(--color-terciario);
+    color: var(--color-secundario);
     text-align: center;
 }
 
@@ -152,7 +140,9 @@ form .input {
 /* Le damos un tamaño a la imagen del producto */
 .card img {
     width: 100%;
-    height: 50%;
-    border-radius: 1rem;
+    height: 100%;
+}
+
+.sombra {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
