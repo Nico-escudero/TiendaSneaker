@@ -1,49 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* 2 tipografias una para los titulos principales y links y otra para los demas textos  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Righteous&display=swap');
 
 
 /* un roor para los colores de la página en formato hexadecimal */
 :root {
-    --color-primario: #141414;
+    --color-primario: #1c1c1c;
     --color-secundario: #0f0f0f;
     --color-terciario: #fafafa;
-    --color-acento: #ff2d26;
+    --color-acento: #ff2e27;
 }
 
-/* Estilos de la página */
-body {
-    font-family: "Abel", sans-serif;
-    font-weight: 400;
+/* Defino la tipografia que se va a utiliziar */
+* {
+    font-family: "Poppins", sans-serif;
     font-style: normal;
-    background-color: var(--color-secundario);
-    color: var(--color-terciario);
+}
+
+/* Estilos generales de la página */
+body {
     margin: 0;
     padding: 0;
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
 }
 
-/* Estilo para el H1 */
-h1 {
+.h1 {
+    font-family: "Righteous", sans-serif;
     color: var(--color-terciario);
     font-size: 2.5rem;
     font-weight: 700;
 }
 
-/* Estilo para el P */
-p {
+
+.p {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
 }
 
-/* sacamos el estilo de la lista */
 ul li {
     list-style: none;
 }
 
 
-/* sacamos el estilo de los enlaces */
 a {
+    font-family: "Righteous", sans-serif;
     text-decoration: none;
     color: var(--color-terciario);
+}
+
+/* Para destacar con el color acento */
+.importante {
+    font-weight: bold;
+    color: var(--color-acento);
+}
+
+/* Para dar un sombreado a los elementos */
+.sombra {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -54,42 +68,37 @@ a {
     padding: 1rem;
 }
 
-/* Estilos para el header y el footer */
+/* Cambiamos el fondo para el header y el footer */
 .header,
 .footer {
     background-color: var(--color-secundario);
 
 }
 
+/* Main */
 .main {
     background-color: var(--color-primario);
 }
 
-/* Centrando los elementos del footer */
+/* Footer */
 .footer {
     text-align: center;
 }
 
+/* Estilo para el nav */
 /* le damos un fondo al logo del nav para distinguirlo*/
 .logo {
     width: 100px;
     height: 100px;
     background-color: var(--color-terciario);
     border-radius: 1rem;
-    /* Estilo para el logo del nav */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
+/* Tamaño del logo */
 .logo img {
     width: 70%;
     height: 100%;
-}
-
-/* Clase hechada para destacar con el color acento */
-.importante {
-    font-weight: bold;
-    color: var(--color-acento);
 }
 
 /* Clase para darle un fondo al formulario */
@@ -100,17 +109,21 @@ a {
     border-radius: 1rem;
 }
 
-/* Estilo para los inputs redondeandolos y darle un fondo */
+/* Estilo para los inputs redondeandolos */
 .formulario .input {
-    border-radius: 1.5rem;
     padding: 1rem;
+    border-radius: 1.5rem;
     border: 1px solid var(--color-secundario);
-    background-color: var(--color-terciario);
 }
 
-/* Dejamos la apariencia default de los botones y le damos estilo */
+.formulario .label,
+.formulario .input {
+    color: var(--color-secundario);
+}
+
+/* Le damos estilo un estilo distino al boton del formulario para dar contraste */
 .boton {
-    background-color: var(--color-acento);
+    background-color: #a51b17;
     border: none;
     color: var(--color-terciario);
     padding: 10px 20px;
@@ -128,11 +141,11 @@ a {
     width: 15rem;
     height: 20rem;
     margin: 1rem;
-    background-color: var(--color-terciario);
-    padding: 1rem;
-    border-radius: 0 1rem 1rem 1rem;
-    color: var(--color-secundario);
     text-align: center;
+    padding: 1rem;
+    background-color: var(--color-terciario);
+    color: var(--color-secundario);
+    border-radius: 0 1rem 1rem 1rem;
 }
 
 
@@ -140,8 +153,4 @@ a {
 .card img {
     width: 100%;
     height: 100%;
-}
-
-.sombra {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
