@@ -16,6 +16,7 @@
     font-style: normal;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Estilos generales de la página */
@@ -31,28 +32,10 @@ body {
     font-weight: 700;
 }
 
-
 .p {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-ul li {
-    list-style: none;
-}
-
-
-a {
-    font-family: "Righteous", sans-serif;
-    text-decoration: none;
-    color: var(--color-terciario);
 }
 
 /* Para destacar con el color acento */
@@ -66,27 +49,25 @@ a {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Cambiamos el fondo para el header y el footer */
+.header,
+.footer {
+    background-color: var(--color-secundario);
+}
 
 /* unimos header, main y footer para darles a todos el mismo estilo, para no repetir codigo */
-.header,
 .footer,
 .main {
     padding: 20px;
 }
 
-/* Cambiamos el fondo para el header y el footer */
-.header,
-.footer {
-    background-color: var(--color-secundario);
-
-}
-
-/* Main */
 .main {
     background-color: var(--color-primario);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1.5rem;
+    padding-top: 330px;
+    justify-items: center;
 }
 
 /* Footer */
@@ -95,7 +76,6 @@ a {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 10vh;
 }
 
 .redes {
@@ -111,11 +91,35 @@ a {
 
 .header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+    /* Para que el header siempre esté por encima */
 }
 
 /* Estilo para el nav */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+
+a {
+    font-family: "Righteous", sans-serif;
+    text-decoration: none;
+    color: var(--color-terciario);
+}
+
 /* le damos un fondo al logo del nav para distinguirlo*/
 .logo {
     width: 100px;
@@ -125,7 +129,7 @@ a {
     text-align: center;
 }
 
-/* Tamaño del logo */
+/* Tamaño del logo */
 .logo img {
     width: 70%;
     height: 100%;
@@ -134,17 +138,19 @@ a {
 /* Estilo para las secciones */
 section {
     margin-bottom: 1rem;
+    width: 100%;
+    /* Ocupan todo el ancho disponible en móvil */
 }
 
 /* Clase para darle un fondo al formulario */
 .formulario {
     display: flex;
     flex-direction: column;
+    width: 90vw;
     gap: 1rem;
     background-color: var(--color-terciario);
     color: var(--color-secundario);
     padding: 2rem;
-    margin: 0 10vh 0 10vh;
     border-radius: 1rem;
 }
 
@@ -160,7 +166,7 @@ section {
     color: var(--color-secundario);
 }
 
-/* Le damos estilo un estilo distino al boton del formulario para dar contraste */
+/* Le damos un estilo distinto al boton del formulario para dar contraste */
 .boton {
     background-color: #a51b17;
     border: none;
@@ -198,4 +204,119 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.imgIndex,
+.imgFaq,
+.imgSobreNosotros,
+.imgContacto {
+    width: 90vw;
+}
+
+@media (min-width: 1024px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    .main {
+        padding-top: 150px;
+    }
+
+    .mainIndex,
+    .mainFaq,
+    .mainContacto {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
+        gap: 2rem;
+    }
+
+    /* grid para el index */
+    .mainIndex {
+        grid-template-areas:
+            "titulo    titulo"
+            "beneficios imagen"
+            "beneficios servicios";
+    }
+
+    .tituloPrincipal {
+        text-align: center;
+        grid-area: titulo;
+    }
+
+    .beneficios {
+        grid-area: beneficios;
+    }
+
+    .imgPrincipal {
+        grid-area: imagen;
+    }
+
+    .servicios {
+        grid-area: servicios;
+    }
+
+    /* grid para las FAQ */
+    .mainFaq {
+        grid-template-areas:
+            "titulo    titulo"
+            "preguntaPrincipal preguntaSecundaria"
+            "preguntaTerciaria preguntaCuaternaria";
+    }
+
+    .tituloFaq {
+        grid-area: titulo;
+        text-align: center;
+    }
+
+    .preguntaPrincipal {
+        grid-area: preguntaPrincipal;
+    }
+
+    .preguntaSecundaria {
+        grid-area: preguntaSecundaria;
+    }
+
+    .preguntaTerciaria {
+        grid-area: preguntaTerciaria;
+    }
+
+    .preguntaCuaternaria {
+        grid-area: preguntaCuaternaria;
+    }
+
+    /* grid para contacto */
+    .mainContacto {
+        grid-template-areas:
+            "titulo    titulo"
+            "formulario contacto"
+            "formulario contacto";
+    }
+
+    .tituloContacto {
+        grid-area: titulo;
+        text-align: center;
+    }
+
+    .formulario {
+        width: 35vw;
+        grid-area: formulario;
+    }
+
+    .contacto {
+        grid-area: contacto;
+    }
+
+    .imgIndex,
+    .imgFaq,
+    .imgSobreNosotros,
+    .imgContacto {
+        width: 40vw;
+        height: 50vh;
+    }
 }
