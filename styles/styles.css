@@ -58,7 +58,7 @@ body {
 /* unimos header, main y footer para darles a todos el mismo estilo, para no repetir codigo */
 .footer,
 .main {
-    padding: 20px;
+    padding: 1rem;
 }
 
 .main {
@@ -66,7 +66,7 @@ body {
     display: grid;
     grid-template-columns: 100%;
     gap: 1.5rem;
-    padding-top: 330px;
+    padding-top: 140px;
     justify-items: center;
 }
 
@@ -87,6 +87,14 @@ body {
 .redes a {
     display: flex;
     align-items: center;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.redes a:hover {
+    color: var(--color-acento);
+    transition: 0.5s;
+    transform: scale(1.1);
 }
 
 .header {
@@ -102,6 +110,11 @@ body {
 }
 
 /* Estilo para el nav */
+
+.bg-navbar {
+    background-color: var(--color-secundario);
+}
+
 nav ul {
     display: flex;
     flex-direction: column;
@@ -113,11 +126,28 @@ ul li {
     list-style: none;
 }
 
-
-a {
+.nav-link {
     font-family: "Righteous", sans-serif;
     text-decoration: none;
     color: var(--color-terciario);
+}
+
+.nav-link:hover {
+    color: var(--color-acento);
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--color-acento);
+}
+
+.offcanvas-end {
+    background-color: var(--color-secundario);
+}
+
+.btn-close {
+    filter: invert(1);
+    /* funcion para invertir el color */
 }
 
 /* le damos un fondo al logo del nav para distinguirlo*/
@@ -166,6 +196,13 @@ section {
     color: var(--color-secundario);
 }
 
+.formulario .input:focus {
+    outline: none;
+    border-color: var(--color-acento);
+    box-shadow: 0 0 5px var(--color-acento);
+    transition: 0.3s;
+}
+
 /* Le damos un estilo distinto al boton del formulario para dar contraste */
 .boton {
     background-color: #a51b17;
@@ -181,11 +218,23 @@ section {
     border-radius: 5px;
 }
 
+.boton:hover {
+    background-color: var(--color-acento);
+    transition: 0.3s;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
 /* Cree un fondo para los productos que esten separados */
 .card {
     width: 15rem;
-    height: 20rem;
-    margin: 1rem;
+    height: 23rem;
     text-align: center;
     padding: 1rem;
     background-color: var(--color-terciario);
@@ -193,24 +242,22 @@ section {
     border-radius: 0 1rem 1rem 1rem;
 }
 
-
-/* Le damos un tamaño a la imagen del producto */
-.card img {
-    width: 100%;
-    height: 100%;
+.card:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
 .imgIndex,
 .imgFaq,
 .imgSobreNosotros,
 .imgContacto {
     width: 90vw;
+}
+
+.creadorFooter:hover {
+    color: var(--color-terciario);
+    transition: 0.5s;
 }
 
 @media (min-width: 1024px) {
@@ -241,8 +288,10 @@ section {
         grid-template-areas:
             "titulo    titulo"
             "beneficios imagen"
-            "beneficios servicios";
+            "imagCarrousel servicios";
     }
+
+
 
     .tituloPrincipal {
         text-align: center;
@@ -251,6 +300,10 @@ section {
 
     .beneficios {
         grid-area: beneficios;
+    }
+
+    .imgCarrousel {
+        grid-area: imagCarrousel;
     }
 
     .imgPrincipal {
@@ -316,6 +369,11 @@ section {
     .imgFaq,
     .imgSobreNosotros,
     .imgContacto {
+        width: 40vw;
+        height: 50vh;
+    }
+
+    .carouselSobreNosotros {
         width: 40vw;
         height: 50vh;
     }
