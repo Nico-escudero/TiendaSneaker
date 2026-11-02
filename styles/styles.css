@@ -237,6 +237,7 @@ section {
 
 /* Cree un fondo para los productos que esten separados */
 .card {
+    justify-content: center;
     width: 15rem;
     height: 23rem;
     text-align: center;
@@ -380,5 +381,9 @@ section {
     .carouselSobreNosotros {
         width: 40vw;
         height: 50vh;
+    }
+
+    .card {
+        justify-content: space-between;
     }
 }
