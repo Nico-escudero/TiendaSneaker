@@ -118,8 +118,8 @@ body {
 nav ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    align-items: start;
+    gap: 0.5rem;
 }
 
 ul li {
@@ -145,9 +145,13 @@ ul li {
     background-color: var(--color-secundario);
 }
 
-.btn-close {
+.btn-close,
+.navbar-toggler-icon {
     filter: invert(1);
-    /* funcion para invertir el color */
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
 }
 
 /* le damos un fondo al logo del nav para distinguirlo*/
