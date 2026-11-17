@@ -1,0 +1,31 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+/* Footer */
+.footer {
+    @include displayFlex(column, center, center);
+    background-color: $colorSecundario;
+    padding: 1rem;
+}
+
+.redes {
+    @include displayFlex(null, center, null);
+    gap: 1rem;
+
+    a {
+        @include displayFlex(null, null, center);
+        color: $colorTerciario;
+        text-decoration: none;
+
+        &:hover {
+            color: $colorAcento;
+            transition: 0.5s;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.creadorFooter:hover {
+    color: var(--color-terciario);
+    transition: 0.5s;
+}

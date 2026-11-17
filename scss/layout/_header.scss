@@ -1,0 +1,18 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+.header {
+    @include displayFlex(column, null, center);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+    background-color: $colorSecundario;
+
+    /* Para que el header siempre esté por encima */
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

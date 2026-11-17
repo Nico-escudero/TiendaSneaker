@@ -1,0 +1,65 @@
+@use "../utilities/variables" as *;
+@use "../base/tipografia" as *;
+@use "../utilities/mixins" as *;
+
+/* Estilo para el nav */
+
+.bg-navbar {
+    background-color: $colorSecundario;
+}
+
+nav ul {
+    @include displayFlex(column, null, start);
+    gap: 0.5rem;
+
+    li {
+        list-style: none;
+    }
+
+    @include desktop {
+        flex-direction: row;
+    }
+}
+
+
+.nav-link {
+    font-family: $tipografiaTitulo;
+    text-decoration: none;
+    color: $colorTerciario;
+
+    &:hover {
+        color: $colorAcento;
+        transition: 0.3s;
+    }
+}
+
+.navbar-nav .nav-link.active {
+    color: $colorAcento;
+}
+
+.offcanvas-end {
+    background-color: $colorSecundario;
+}
+
+.btn-close,
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* le damos un fondo al logo del nav para distinguirlo*/
+.logo {
+    width: 100px;
+    height: 100px;
+    background-color: $colorTerciario;
+    border-radius: 1rem;
+    text-align: center;
+
+    img {
+        width: 70%;
+        height: 100%;
+    }
+}

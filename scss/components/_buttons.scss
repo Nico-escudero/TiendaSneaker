@@ -1,0 +1,22 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+/* Le damos un estilo distinto al boton del formulario para dar contraste */
+.boton {
+    background-color: $colorAcentoVariante;
+    border: none;
+    color: $colorTerciario;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: $colorAcento;
+        transition: 0.3s;
+    }
+}
