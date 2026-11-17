@@ -1,6 +1,8 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
 @use "tipografia" as *;
+/* 2 tipografias una para los titulos principales y links y otra para los demas textos  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Righteous&display=swap');
 
 /* Estilos generales de la página */
 * {

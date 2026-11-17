@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/* 2 tipografias una para los titulos principales y links y otra para los demas textos  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Righteous&display=swap");
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+  background-color: #0f0f0f;
+  /* Para que el header siempre esté por encima */
+}
+@media (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f0f;
+  padding: 1rem;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.redes a {
+  display: flex;
+  align-items: center;
+  color: #fafafa;
+  text-decoration: none;
+}
+.redes a:hover {
+  color: #ff2e27;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+.creadorFooter:hover {
+  color: var(--color-terciario);
+  transition: 0.5s;
+}
+
+/* Estilo para el nav */
+.bg-navbar {
+  background-color: #0f0f0f;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+}
+nav ul li {
+  list-style: none;
+}
+@media (min-width: 1024px) {
+  nav ul {
+    flex-direction: row;
+  }
+}
+
+.nav-link {
+  font-family: "Righteous", sans-serif;
+  text-decoration: none;
+  color: #fafafa;
+}
+.nav-link:hover {
+  color: #ff2e27;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ff2e27;
+}
+
+.offcanvas-end {
+  background-color: #0f0f0f;
+}
+
+.btn-close,
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* le damos un fondo al logo del nav para distinguirlo*/
+.logo {
+  width: 100px;
+  height: 100px;
+  background-color: #fafafa;
+  border-radius: 1rem;
+  text-align: center;
+}
+.logo img {
+  width: 70%;
+  height: 100%;
+}
+
+/* Estilos generales de la página */
+* {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #fafafa;
+}
+
+.h1 {
+  font-family: "Righteous", sans-serif;
+  color: #fafafa;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Para destacar con el color acento */
+.importante {
+  font-weight: bold;
+  color: #ff2e27;
+}
+
+/* Para dar un sombreado a los elementos */
+.sombra {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+  background-color: #1c1c1c;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 1.5rem;
+  padding-top: 140px;
+  justify-items: center;
+  padding: 1rem;
+}
+@media (min-width: 1024px) {
+  .main {
+    padding-top: 150px;
+  }
+}
+
+/* Estilo para las secciones */
+section {
+  margin-bottom: 1rem;
+  width: 100%;
+  /* Ocupan todo el ancho disponible en móvil */
+}
+
+.imgIndex,
+.imgFaq,
+.imgSobreNosotros,
+.imgContacto {
+  width: 90vw;
+}
+
+/* Clase para darle un fondo al formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  gap: 1rem;
+  background-color: #fafafa;
+  color: #0f0f0f;
+  padding: 2rem;
+  border-radius: 1rem;
+  /* Estilo para los inputs redondeandolos */
+}
+.formulario .input {
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border: 1px solid #0f0f0f;
+  color: #0f0f0f;
+}
+.formulario .input:focus {
+  outline: none;
+  border-color: #ff2e27;
+  box-shadow: 0 0 5px #ff2e27;
+  transition: 0.3s;
+}
+.formulario .label {
+  color: #0f0f0f;
+}
+
+@media (min-width: 1024px) {
+  .mainIndex,
+  .mainFaq,
+  .mainContacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 2rem;
+  }
+  /* grid para el index */
+  .mainIndex {
+    grid-template-areas: "titulo    titulo" "beneficios imagen" "imagCarrousel servicios";
+  }
+  .tituloPrincipal {
+    text-align: center;
+    grid-area: titulo;
+  }
+  .beneficios {
+    grid-area: beneficios;
+  }
+  .imgCarrousel {
+    grid-area: imagCarrousel;
+  }
+  .imgPrincipal {
+    grid-area: imagen;
+  }
+  .servicios {
+    grid-area: servicios;
+  }
+  /* grid para las FAQ */
+  .mainFaq {
+    grid-template-areas: "titulo    titulo" "preguntaPrincipal preguntaSecundaria" "preguntaTerciaria preguntaCuaternaria";
+  }
+  .tituloFaq {
+    grid-area: titulo;
+    text-align: center;
+  }
+  .preguntaPrincipal {
+    grid-area: preguntaPrincipal;
+  }
+  .preguntaSecundaria {
+    grid-area: preguntaSecundaria;
+  }
+  .preguntaTerciaria {
+    grid-area: preguntaTerciaria;
+  }
+  .preguntaCuaternaria {
+    grid-area: preguntaCuaternaria;
+  }
+  /* grid para contacto */
+  .mainContacto {
+    grid-template-areas: "titulo    titulo" "formulario contacto" "formulario contacto";
+  }
+  .tituloContacto {
+    grid-area: titulo;
+    text-align: center;
+  }
+  .formulario {
+    width: 35vw;
+    grid-area: formulario;
+  }
+  .contacto {
+    grid-area: contacto;
+  }
+  .imgIndex,
+  .imgFaq,
+  .imgSobreNosotros,
+  .imgContacto,
+  .carouselSobreNosotros {
+    width: 40vw;
+    height: 50vh;
+  }
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Cree un fondo para los productos que esten separados */
+.card {
+  justify-content: center;
+  width: 15rem;
+  height: 23rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #fafafa;
+  color: #0f0f0f;
+  border-radius: 0 1rem 1rem 1rem;
+}
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/* Le damos un estilo distinto al boton del formulario para dar contraste */
+.boton {
+  background-color: #a51b17;
+  border: none;
+  color: #fafafa;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.boton:hover {
+  background-color: #ff2e27;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=main.css.map */
