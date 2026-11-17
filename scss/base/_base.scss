@@ -1,0 +1,201 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "tipografia" as *;
+
+/* Estilos generales de la página */
+* {
+    font-family: $tipografiaGeneral;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $colorSecundario;
+    color: $colorTerciario;
+}
+
+.h1 {
+    font-family: $tipografiaTitulo;
+    color: $colorTerciario;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Para destacar con el color acento */
+.importante {
+    font-weight: bold;
+    color: $colorAcento;
+}
+
+/* Para dar un sombreado a los elementos */
+.sombra {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    background-color: $colorPrimario;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1.5rem;
+    padding-top: 140px;
+    justify-items: center;
+    padding: 1rem;
+
+    @include desktop {
+        padding-top: 150px;
+    }
+}
+
+/* Estilo para las secciones */
+section {
+    margin-bottom: 1rem;
+    width: 100%;
+    /* Ocupan todo el ancho disponible en móvil */
+}
+
+.imgIndex,
+.imgFaq,
+.imgSobreNosotros,
+.imgContacto {
+    width: 90vw;
+}
+
+/* Clase para darle un fondo al formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    gap: 1rem;
+    background-color: $colorTerciario;
+    color: $colorSecundario;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    /* Estilo para los inputs redondeandolos */
+    .input {
+        padding: 1rem;
+        border-radius: 1.5rem;
+        border: 1px solid $colorSecundario;
+        color: $colorSecundario;
+
+        &:focus {
+            outline: none;
+            border-color: $colorAcento;
+            box-shadow: 0 0 5px $colorAcento;
+            transition: 0.3s;
+        }
+    }
+
+    .label {
+        color: $colorSecundario;
+    }
+}
+
+@include desktop {
+
+    .mainIndex,
+    .mainFaq,
+    .mainContacto {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
+        gap: 2rem;
+    }
+
+    /* grid para el index */
+    .mainIndex {
+        grid-template-areas:
+            "titulo    titulo"
+            "beneficios imagen"
+            "imagCarrousel servicios";
+    }
+
+    .tituloPrincipal {
+        text-align: center;
+        grid-area: titulo;
+    }
+
+    .beneficios {
+        grid-area: beneficios;
+    }
+
+    .imgCarrousel {
+        grid-area: imagCarrousel;
+    }
+
+    .imgPrincipal {
+        grid-area: imagen;
+    }
+
+    .servicios {
+        grid-area: servicios;
+    }
+
+    /* grid para las FAQ */
+    .mainFaq {
+        grid-template-areas:
+            "titulo    titulo"
+            "preguntaPrincipal preguntaSecundaria"
+            "preguntaTerciaria preguntaCuaternaria";
+    }
+
+    .tituloFaq {
+        grid-area: titulo;
+        text-align: center;
+    }
+
+    .preguntaPrincipal {
+        grid-area: preguntaPrincipal;
+    }
+
+    .preguntaSecundaria {
+        grid-area: preguntaSecundaria;
+    }
+
+    .preguntaTerciaria {
+        grid-area: preguntaTerciaria;
+    }
+
+    .preguntaCuaternaria {
+        grid-area: preguntaCuaternaria;
+    }
+
+    /* grid para contacto */
+    .mainContacto {
+        grid-template-areas:
+            "titulo    titulo"
+            "formulario contacto"
+            "formulario contacto";
+    }
+
+    .tituloContacto {
+        grid-area: titulo;
+        text-align: center;
+    }
+
+    .formulario {
+        width: 35vw;
+        grid-area: formulario;
+    }
+
+    .contacto {
+        grid-area: contacto;
+    }
+
+    .imgIndex,
+    .imgFaq,
+    .imgSobreNosotros,
+    .imgContacto,
+    .carouselSobreNosotros {
+        width: 40vw;
+        height: 50vh;
+    }
+}
