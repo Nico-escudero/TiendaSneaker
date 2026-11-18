@@ -47,13 +47,9 @@ body {
     display: grid;
     grid-template-columns: 100%;
     gap: 1.5rem;
-    padding-top: 140px;
-    justify-items: center;
     padding: 1rem;
-
-    @include desktop {
-        padding-top: 150px;
-    }
+    margin-top: 140px;
+    justify-items: center;
 }
 
 /* Estilo para las secciones */
@@ -87,12 +83,12 @@ section {
         border-radius: 1.5rem;
         border: 1px solid $colorSecundario;
         color: $colorSecundario;
+        transition: 0.5s;
 
         &:focus {
             outline: none;
             border-color: $colorAcento;
             box-shadow: 0 0 5px $colorAcento;
-            transition: 0.3s;
         }
     }
 

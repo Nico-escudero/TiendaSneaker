@@ -40,10 +40,10 @@
   align-items: center;
   color: #fafafa;
   text-decoration: none;
+  transition: 0.5s;
 }
 .redes a:hover {
   color: #ff2e27;
-  transition: 0.5s;
   transform: scale(1.1);
 }
 
@@ -155,14 +155,9 @@ body {
   display: grid;
   grid-template-columns: 100%;
   gap: 1.5rem;
-  padding-top: 140px;
-  justify-items: center;
   padding: 1rem;
-}
-@media (min-width: 1024px) {
-  .main {
-    padding-top: 150px;
-  }
+  margin-top: 140px;
+  justify-items: center;
 }
 
 /* Estilo para las secciones */
@@ -196,12 +191,12 @@ section {
   border-radius: 1.5rem;
   border: 1px solid #0f0f0f;
   color: #0f0f0f;
+  transition: 0.5s;
 }
 .formulario .input:focus {
   outline: none;
   border-color: #ff2e27;
   box-shadow: 0 0 5px #ff2e27;
-  transition: 0.3s;
 }
 .formulario .label {
   color: #0f0f0f;
@@ -298,10 +293,10 @@ section {
   background-color: #fafafa;
   color: #0f0f0f;
   border-radius: 0 1rem 1rem 1rem;
+  transition: transform 0.5s;
 }
 .card:hover {
   transform: scale(1.1);
-  transition: 0.5s;
 }
 
 /* Le damos un estilo distinto al boton del formulario para dar contraste */
@@ -317,10 +312,10 @@ section {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
+  transition: 0.5s;
 }
 .boton:hover {
   background-color: #ff2e27;
-  transition: 0.3s;
 }
 
 /*# sourceMappingURL=main.css.map */

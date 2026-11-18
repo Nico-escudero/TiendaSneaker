@@ -16,10 +16,10 @@
         @include displayFlex(null, null, center);
         color: $colorTerciario;
         text-decoration: none;
+        transition: 0.5s;
 
         &:hover {
             color: $colorAcento;
-            transition: 0.5s;
             transform: scale(1.1);
         }
     }
