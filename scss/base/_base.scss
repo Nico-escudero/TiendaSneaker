@@ -8,8 +8,7 @@
 * {
     font-family: $tipografiaGeneral;
     font-style: normal;
-    margin: 0;
-    padding: 0;
+    @include marginAndPadding(0, 0);
     box-sizing: border-box;
 }
 
@@ -19,15 +18,12 @@ body {
 }
 
 .h1 {
-    font-family: $tipografiaTitulo;
     color: $colorTerciario;
-    font-size: 2.5rem;
-    font-weight: 700;
+    @include variableFont($tipografiaTitulo, 2.5rem, 700);
 }
 
 .p {
-    font-size: 1rem;
-    font-weight: 400;
+    @include variableFont($tipografiaGeneral, 1rem, 400);
     line-height: 1.5;
 }
 
@@ -44,46 +40,43 @@ body {
 
 .main {
     background-color: $colorPrimario;
-    display: grid;
+    @include displayFlex(grid, null, center, null);
     grid-template-columns: 100%;
     gap: 1.5rem;
-    padding: 1rem;
-    margin-top: 140px;
-    justify-items: center;
+    @include marginAndPadding(140px 0 0 0, 1rem);
 }
 
 /* Estilo para las secciones */
 section {
-    margin-bottom: 1rem;
-    width: 100%;
-    /* Ocupan todo el ancho disponible en móvil */
+    @include marginAndPadding(0 0 1rem 0, 0);
+    @include size(100%, auto);
 }
 
 .imgIndex,
 .imgFaq,
 .imgSobreNosotros,
 .imgContacto {
-    width: 90vw;
+    @include size(90vw, auto);
 }
 
 /* Clase para darle un fondo al formulario */
 .formulario {
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
+    @include displayFlex(flex, column, center, null);
+    @include size(90vw, auto);
+    @include marginAndPadding(0, 2rem);
     gap: 1rem;
     background-color: $colorTerciario;
     color: $colorSecundario;
-    padding: 2rem;
     border-radius: 1rem;
 
     /* Estilo para los inputs redondeandolos */
     .input {
-        padding: 1rem;
+        @include marginAndPadding(0, 1rem);
         border-radius: 1.5rem;
         border: 1px solid $colorSecundario;
         color: $colorSecundario;
-        transition: 0.5s;
+
+        @include transition (all, 0.5s);
 
         &:focus {
             outline: none;
@@ -193,7 +186,6 @@ section {
     .imgSobreNosotros,
     .imgContacto,
     .carouselSobreNosotros {
-        width: 40vw;
-        height: 50vh;
+        @include size(40vw, 50vh);
     }
 }

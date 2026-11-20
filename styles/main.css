@@ -5,10 +5,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 1rem;
   position: fixed;
   top: 0;
-  width: 100%;
-  padding: 1rem;
   z-index: 1000;
   background-color: #0f0f0f;
   /* Para que el header siempre esté por encima */
@@ -26,8 +28,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #0f0f0f;
+  margin: 0;
   padding: 1rem;
+  background-color: #0f0f0f;
 }
 
 .redes {
@@ -40,7 +43,7 @@
   align-items: center;
   color: #fafafa;
   text-decoration: none;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 .redes a:hover {
   color: #ff2e27;
@@ -48,8 +51,8 @@
 }
 
 .creadorFooter:hover {
-  color: var(--color-terciario);
-  transition: 0.5s;
+  transition: all 0.5s;
+  color: #fafafa;
 }
 
 /* Estilo para el nav */
@@ -76,10 +79,10 @@ nav ul li {
   font-family: "Righteous", sans-serif;
   text-decoration: none;
   color: #fafafa;
+  transition: all 0.3s;
 }
 .nav-link:hover {
   color: #ff2e27;
-  transition: 0.3s;
 }
 
 .navbar-nav .nav-link.active {
@@ -105,7 +108,6 @@ nav ul li {
   height: 100px;
   background-color: #fafafa;
   border-radius: 1rem;
-  text-align: center;
 }
 .logo img {
   width: 70%;
@@ -127,13 +129,14 @@ body {
 }
 
 .h1 {
-  font-family: "Righteous", sans-serif;
   color: #fafafa;
+  font-family: "Righteous", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
 }
 
 .p {
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -153,18 +156,19 @@ body {
 .main {
   background-color: #1c1c1c;
   display: grid;
+  justify-content: center;
   grid-template-columns: 100%;
   gap: 1.5rem;
+  margin: 140px 0 0 0;
   padding: 1rem;
-  margin-top: 140px;
-  justify-items: center;
 }
 
 /* Estilo para las secciones */
 section {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
+  padding: 0;
   width: 100%;
-  /* Ocupan todo el ancho disponible en móvil */
+  height: auto;
 }
 
 .imgIndex,
@@ -172,26 +176,31 @@ section {
 .imgSobreNosotros,
 .imgContacto {
   width: 90vw;
+  height: auto;
 }
 
 /* Clase para darle un fondo al formulario */
 .formulario {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 90vw;
+  height: auto;
+  margin: 0;
+  padding: 2rem;
   gap: 1rem;
   background-color: #fafafa;
   color: #0f0f0f;
-  padding: 2rem;
   border-radius: 1rem;
   /* Estilo para los inputs redondeandolos */
 }
 .formulario .input {
+  margin: 0;
   padding: 1rem;
   border-radius: 1.5rem;
   border: 1px solid #0f0f0f;
   color: #0f0f0f;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 .formulario .input:focus {
   outline: none;
@@ -285,15 +294,14 @@ section {
 
 /* Cree un fondo para los productos que esten separados */
 .card {
-  justify-content: center;
   width: 15rem;
   height: 23rem;
-  text-align: center;
+  margin: 0;
   padding: 1rem;
   background-color: #fafafa;
   color: #0f0f0f;
   border-radius: 0 1rem 1rem 1rem;
-  transition: transform 0.5s;
+  transition: all 0.5s;
 }
 .card:hover {
   transform: scale(1.1);
@@ -301,18 +309,17 @@ section {
 
 /* Le damos un estilo distinto al boton del formulario para dar contraste */
 .boton {
-  background-color: #a51b17;
-  border: none;
-  color: #fafafa;
+  margin: 4px 2px;
   padding: 10px 20px;
-  text-align: center;
+  background-color: #a51b17;
+  color: #fafafa;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
   text-decoration: none;
   display: inline-block;
-  font-size: 1rem;
-  margin: 4px 2px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 .boton:hover {
   background-color: #ff2e27;

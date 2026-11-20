@@ -3,20 +3,20 @@
 
 /* Footer */
 .footer {
-    @include displayFlex(column, center, center);
+    @include displayFlex(flex, column, center, center);
+    @include marginAndPadding(0, 1rem);
     background-color: $colorSecundario;
-    padding: 1rem;
 }
 
 .redes {
-    @include displayFlex(null, center, null);
+    @include displayFlex(flex, null, center, null);
     gap: 1rem;
 
     a {
-        @include displayFlex(null, null, center);
+        @include displayFlex(flex, null, null, center);
         color: $colorTerciario;
         text-decoration: none;
-        transition: 0.5s;
+        @include transition (all, 0.5s);
 
         &:hover {
             color: $colorAcento;
@@ -26,6 +26,6 @@
 }
 
 .creadorFooter:hover {
-    color: var(--color-terciario);
-    transition: 0.5s;
+    @include transition (all, 0.5s);
+    color: $colorTerciario;
 }

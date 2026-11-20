@@ -1,5 +1,5 @@
-@mixin displayFlex($direction, $justify, $align) {
-    display: flex;
+@mixin displayFlex($display, $direction, $justify, $align) {
+    display: $display;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
@@ -9,4 +9,24 @@
     @media (min-width: 1024px) {
         @content;
     }
+}
+
+@mixin transition($variable, $property) {
+    transition: $variable $property;
+}
+
+@mixin variableFont ($tipografia, $size, $weight) {
+    font-family: $tipografia;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin marginAndPadding ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;
 }

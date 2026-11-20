@@ -2,22 +2,19 @@
 @use "../utilities/mixins" as *;
 
 .card-container {
-    @include displayFlex(null, center, center);
+    @include displayFlex(flex, null, center, center);
     flex-wrap: wrap;
     gap: 2rem;
 }
 
 /* Cree un fondo para los productos que esten separados */
 .card {
-    justify-content: center;
-    width: 15rem;
-    height: 23rem;
-    text-align: center;
-    padding: 1rem;
+    @include size(15rem, 23rem);
+    @include marginAndPadding(0, 1rem);
     background-color: $colorTerciario;
     color: $colorSecundario;
     border-radius: 0 1rem 1rem 1rem;
-    transition: transform 0.5s;
+    @include transition (all, 0.5s);
 
     &:hover {
         transform: scale(1.1);

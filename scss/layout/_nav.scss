@@ -9,7 +9,7 @@
 }
 
 nav ul {
-    @include displayFlex(column, null, start);
+    @include displayFlex(flex, column, null, start);
     gap: 0.5rem;
 
     li {
@@ -26,10 +26,10 @@ nav ul {
     font-family: $tipografiaTitulo;
     text-decoration: none;
     color: $colorTerciario;
+    @include transition (all, 0.3s);
 
     &:hover {
         color: $colorAcento;
-        transition: 0.3s;
     }
 }
 
@@ -52,14 +52,11 @@ nav ul {
 
 /* le damos un fondo al logo del nav para distinguirlo*/
 .logo {
-    width: 100px;
-    height: 100px;
+    @include size(100px, 100px);
     background-color: $colorTerciario;
     border-radius: 1rem;
-    text-align: center;
 
     img {
-        width: 70%;
-        height: 100%;
+        @include size(70%, 100%);
     }
 }

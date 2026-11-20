@@ -2,11 +2,11 @@
 @use "../utilities/variables" as *;
 
 .header {
-    @include displayFlex(column, null, center);
+    @include displayFlex(flex, column, null, center);
+    @include size (100%, auto);
+    @include marginAndPadding(0, 1rem);
     position: fixed;
     top: 0;
-    width: 100%;
-    padding: 1rem;
     z-index: 1000;
     background-color: $colorSecundario;
 
