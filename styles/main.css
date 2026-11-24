@@ -1,6 +1,11 @@
 @charset "UTF-8";
 /* 2 tipografias una para los titulos principales y links y otra para los demas textos  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Righteous&display=swap");
+/* Fondo oscuro compartido por body, header, footer, navbar y offcanvas */
+body, .bg-navbar, .offcanvas-end, .footer, .header {
+  background-color: #0f0f0f;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -12,13 +17,14 @@
   position: fixed;
   top: 0;
   z-index: 1000;
-  background-color: #0f0f0f;
   /* Para que el header siempre esté por encima */
 }
 @media (min-width: 1024px) {
   .header {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -30,7 +36,6 @@
   align-items: center;
   margin: 0;
   padding: 1rem;
-  background-color: #0f0f0f;
 }
 
 .redes {
@@ -56,10 +61,6 @@
 }
 
 /* Estilo para el nav */
-.bg-navbar {
-  background-color: #0f0f0f;
-}
-
 nav ul {
   display: flex;
   flex-direction: column;
@@ -87,10 +88,6 @@ nav ul li {
 
 .navbar-nav .nav-link.active {
   color: #ff2e27;
-}
-
-.offcanvas-end {
-  background-color: #0f0f0f;
 }
 
 .btn-close,
@@ -124,7 +121,6 @@ nav ul li {
 }
 
 body {
-  background-color: #0f0f0f;
   color: #fafafa;
 }
 
@@ -161,6 +157,7 @@ body {
   gap: 1.5rem;
   margin: 140px 0 0 0;
   padding: 1rem;
+  overflow-x: clip;
 }
 
 /* Estilo para las secciones */
@@ -218,6 +215,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto auto;
+    justify-items: center;
     gap: 2rem;
   }
   /* grid para el index */
@@ -301,6 +299,7 @@ section {
   background-color: #fafafa;
   color: #0f0f0f;
   border-radius: 0 1rem 1rem 1rem;
+  cursor: pointer;
   transition: all 0.5s;
 }
 .card:hover {

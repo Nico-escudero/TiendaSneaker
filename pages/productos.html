@@ -7,6 +7,7 @@
     <title>Tienda Sneaker | pisar con estilo </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 
@@ -26,7 +27,7 @@
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="menu" aria-labelledby="menuLabel">
                     <div class="offcanvas-header">
                         <a class="navbar-brand" href="../index.html">
-                            <div class="logo">
+                            <div class="logo text-center">
                                 <img src="../assets/logo.webp" alt="Logo Tienda Sneaker">
                             </div>
                         </a>
@@ -57,7 +58,7 @@
     </header>
 
     <main class="main">
-        <h1 class="h1">Nuestros productos</h1>
+        <h1 class="h1" data-aos="fade-up" data-aos-duration="1000">Nuestros productos</h1>
         <section>
             <h2 class="importante">Colección Addidas</h2>
             <p class="p">Explora nuestra exclusiva colección de zapatillas Adidas, diseñadas para combinar estilo y
@@ -65,59 +66,74 @@
                 cada paso. Desde los clásicos modelos hasta las últimas tendencias, tenemos algo para todos los amantes
                 del calzado deportivo.</p>
             <div class="card-container">
-                <article class="card text-center justify-content-center">
-                    <h3>Adidas campus</h3>
-                    <figure>
-                        <img class="img-fluid" src="../assets/adidas-campus.webp" alt="zapatillas adidas campus" />
-                        <figcaption>Zapatilla adidas campus color amarillo para el verano</figcaption>
-                    </figure>
-                </article>
-                <article class="card text-center justify-content-center">
-                    <h3>Adidas superstar</h3>
-                    <figure>
-                        <img class="img-fluid" src="../assets/adidas-superstar.webp"
-                            alt="zapatillas adidas superstar" />
-                        <figcaption>Zapatillas adidas superstar para algo mas casual</figcaption>
-                    </figure>
-                </article>
-                <article class="card text-center justify-content-center">
-                    <h3>Adidas zamba</h3>
-                    <figure>
-                        <img class="img-fluid" src="../assets/adidas-samba.webp" alt="zapatillas adidas samba" />
-                        <figcaption>Zapatillas adidas samba para algo mas elegante</figcaption>
-                    </figure>
-                </article>
-                <article class="card text-center justify-content-center">
-                    <h3>Adidas campus</h3>
-                    <figure>
-                        <img class="img-fluid" src="../assets/adidas-campus-2.webp" alt="zapatillas adidas campus" />
-                        <figcaption>Zapatilla adidas campus color gris para el invierno</figcaption>
-                    </figure>
-                </article>
-                <article class="card text-center justify-content-center">
-                    <h3>Adidas superstar</h3>
-                    <figure>
-                        <img class="img-fluid" src="../assets/adidas-super-start.webp"
-                            alt="zapatillas adidas superstar version plata" />
-                        <figcaption>Zapatillas adidas superstar version plata, para algo mas casual</figcaption>
-                    </figure>
-                </article>
-                <article class="card text-center justify-content-center">
-                    <h3>Adidas courtwave</h3>
-                    <figure>
-                        <img class="img-fluid" src="../assets/adidas-deportivas.webp"
-                            alt="zapatillas adidas courtwave" />
-                        <figcaption>Zapatillas adidas courtwave para algo mas elegante</figcaption>
-                    </figure>
-                </article>
-                <article class="card text-center justify-content-center">
-                    <h3>Adidas Bad Bunny</h3>
-                    <figure>
-                        <img class="img-fluid" src="../assets/adidas-bad-bunny.webp"
-                            alt="zapatillas adidas bad bunny" />
-                        <figcaption>Zapatillas adidas bad bunny para algo mas urbano</figcaption>
-                    </figure>
-                </article>
+                <div data-aos="zoom-in" data-aos-duration="1000">
+                    <article class=" card text-center justify-content-center">
+                        <h3>Adidas campus</h3>
+                        <figure>
+                            <img class="img-fluid" src="../assets/adidas-campus.webp" alt="zapatillas adidas campus" />
+                            <figcaption>Zapatilla adidas campus color amarillo para el verano</figcaption>
+                        </figure>
+                    </article>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+                    <article class=" card text-center justify-content-center">
+                        <h3>Adidas superstar</h3>
+                        <figure>
+                            <img class="img-fluid" src="../assets/adidas-superstar.webp"
+                                alt="zapatillas adidas superstar" />
+                            <figcaption>Zapatillas adidas superstar para algo mas casual</figcaption>
+                        </figure>
+                    </article>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+                    <article class="card text-center justify-content-center">
+                        <h3>Adidas zamba</h3>
+                        <figure>
+                            <img class="img-fluid" src="../assets/adidas-samba.webp" alt="zapatillas adidas samba" />
+                            <figcaption>Zapatillas adidas samba para algo mas elegante</figcaption>
+                        </figure>
+                    </article>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                    <article class="card text-center justify-content-center">
+                        <h3>Adidas campus</h3>
+                        <figure>
+                            <img class="img-fluid" src="../assets/adidas-campus-2.webp"
+                                alt="zapatillas adidas campus" />
+                            <figcaption>Zapatilla adidas campus color gris para el invierno</figcaption>
+                        </figure>
+                    </article>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+                    <article class="card text-center justify-content-center">
+                        <h3>Adidas superstar</h3>
+                        <figure>
+                            <img class="img-fluid" src="../assets/adidas-super-start.webp"
+                                alt="zapatillas adidas superstar version plata" />
+                            <figcaption>Zapatillas adidas superstar version plata, para algo mas casual</figcaption>
+                        </figure>
+                    </article>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000">
+                    <article class="card text-center justify-content-center">
+                        <h3>Adidas courtwave</h3>
+                        <figure>
+                            <img class="img-fluid" src="../assets/adidas-deportivas.webp"
+                                alt="zapatillas adidas courtwave" />
+                            <figcaption>Zapatillas adidas courtwave para algo mas elegante</figcaption>
+                        </figure>
+                    </article>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
+                    <article class="card text-center justify-content-center">
+                        <h3>Adidas Bad Bunny</h3>
+                        <figure>
+                            <img class="img-fluid" src="../assets/adidas-bad-bunny.webp"
+                                alt="zapatillas adidas bad bunny" />
+                            <figcaption>Zapatillas adidas bad bunny para algo mas urbano</figcaption>
+                        </figure>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
@@ -146,6 +162,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

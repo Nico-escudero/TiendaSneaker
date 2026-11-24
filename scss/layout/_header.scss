@@ -1,5 +1,6 @@
 @use "../utilities/mixins" as *;
 @use "../utilities/variables" as *;
+@use "../utilities/placeholders" as *;
 
 .header {
     @include displayFlex(flex, column, null, center);
@@ -8,11 +9,10 @@
     position: fixed;
     top: 0;
     z-index: 1000;
-    background-color: $colorSecundario;
+    @extend %fondoOscuro;
 
     /* Para que el header siempre esté por encima */
     @include desktop {
-        flex-direction: row;
-        justify-content: space-between;
+        @include displayFlex(flex, row, space-between, center);
     }
 }

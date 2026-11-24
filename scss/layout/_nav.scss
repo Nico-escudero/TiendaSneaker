@@ -1,11 +1,12 @@
 @use "../utilities/variables" as *;
 @use "../base/tipografia" as *;
 @use "../utilities/mixins" as *;
+@use "../utilities/placeholders" as *;
 
 /* Estilo para el nav */
 
 .bg-navbar {
-    background-color: $colorSecundario;
+    @extend %fondoOscuro;
 }
 
 nav ul {
@@ -38,7 +39,7 @@ nav ul {
 }
 
 .offcanvas-end {
-    background-color: $colorSecundario;
+    @extend %fondoOscuro;
 }
 
 .btn-close,

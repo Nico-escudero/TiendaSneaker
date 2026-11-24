@@ -1,11 +1,12 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
+@use "../utilities/placeholders" as *;
 
 /* Footer */
 .footer {
     @include displayFlex(flex, column, center, center);
     @include marginAndPadding(0, 1rem);
-    background-color: $colorSecundario;
+    @extend %fondoOscuro;
 }
 
 .redes {

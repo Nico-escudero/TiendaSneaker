@@ -1,0 +1,6 @@
+@use "variables" as *;
+
+/* Fondo oscuro compartido por body, header, footer, navbar y offcanvas */
+%fondoOscuro {
+    background-color: $colorSecundario;
+}
